@@ -1,0 +1,14 @@
+<view class="main" style="{{mainStyle}}">
+  <block wx:for="{{viewData}}" wx:for-item="i" wx:key="i">
+    <view class="column"
+      style="{{columnStyle}}width:1.2em;height:{{numberBoxSize}}{{numberBoxSizeUnit}};line-height:{{numberBoxSize}}{{numberBoxSizeUnit}};">
+      <view class="animationSolid" style="transform:translateY(-{{i.animationTop}}%);transition-duration:{{duration}}">
+        <block wx:for="{{i.numberColumn}}" wx:for-item="k" wx:key="k">
+          <view class="number"
+            style="{{numberStyle}}font-size:{{numberSize}}{{numberSizeUnit}};width:100%;text-align:center;line-height:{{numberBoxSize}}{{numberBoxSizeUnit}};">
+            {{k}}</view>
+        </block>
+      </view>
+    </view>
+  </block>
+</view>
